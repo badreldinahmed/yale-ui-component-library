@@ -11,5 +11,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          spec: yale-ui-component-library/cypress/integration/examples/axe.spec.js
-
+          spec: cypress/integration/axe.spec.js
