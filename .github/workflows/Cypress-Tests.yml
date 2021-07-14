@@ -9,8 +9,8 @@ jobs:
         uses: actions/checkout@v2
         
       - name: opening-localhost
-        run: npx @11ty/eleventy --serve
-      - run: npm test
+        run: npx @11ty/eleventy --serve 
+             npm test
         
       - name: Cypress run
         uses: cypress-io/github-action@v2
