@@ -7,12 +7,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
-      - name: opening-localhost
-        with:
-          start: npx @11ty/eleventy --serve
-          wait-on: 'http://localhost:8080'
-        
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
