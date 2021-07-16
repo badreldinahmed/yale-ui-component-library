@@ -11,6 +11,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          run: npx @11ty/eleventy --serve
+          start: npx @11ty/eleventy --serve
           spec: |
             cypress/integration/examples/axe.spec.js
