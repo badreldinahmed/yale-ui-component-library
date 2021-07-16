@@ -7,13 +7,11 @@ jobs:
     
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        
-      - name: Opening-Localhost
-        run: npx @11ty/eleventy --serve
-        
+        uses: actions/checkout@v2    
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          build: npm run build
+          run: npx @11ty/eleventy --serve
           spec: |
             cypress/integration/examples/axe.spec.js
