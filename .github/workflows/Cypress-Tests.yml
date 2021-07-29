@@ -1,9 +1,16 @@
 name: Cypress tests
-on: [push]
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
 jobs:
   cypress-run:
     name: Cypress run
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
+    timeout-minute: 10
     
     steps:
       - name: Checkout
