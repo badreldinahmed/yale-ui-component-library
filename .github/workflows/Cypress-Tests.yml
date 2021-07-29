@@ -35,6 +35,7 @@ jobs:
       # after the test run completes
       # store videos and any screenshots
       # NOTE: screenshots will be generated only if E2E test failed, thus we store screenshots only on failures
+      # "artifacts stay on your github logs for up to 30 days"
       - uses: actions/upload-artifact@v2
         if: failure()
         with:
